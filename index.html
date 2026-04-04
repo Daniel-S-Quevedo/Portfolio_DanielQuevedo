@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Daniel Quevedo — Data Analyst. Power BI, Automação e Business Intelligence."/>
+<title> Daniel Quevedo · Data Intelligence </title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Playfair+Display&family=IBM+Plex+Mono&display=swap" rel="stylesheet"/>
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+<link rel="icon" href="./assets/images/favicon.ico">
+<link rel="manifest" href="./assets/images/site.webmanifest">
+
+<!-- CSS externo -->
+<link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+
+<body>
+<!-- CURSOR -->
+<div class="cursor-dot" id="cdot"></div>
+<div class="cursor-ring" id="cring"></div>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#inicio" class="brand" onclick="scrollSection('inicio');return false">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" class="logo-svg" aria-hidden="true">
+        <circle cx="17" cy="17" r="16" stroke="url(#ng)" stroke-width=".9" opacity=".45"/>
+        <rect x="7"  y="21" width="3.5" height="6.5" rx="1" fill="url(#ng)" opacity=".4"/>
+        <rect x="12" y="16" width="3.5" height="11.5" rx="1" fill="url(#ng)" opacity=".65"/>
+        <rect x="17" y="11" width="3.5" height="16.5" rx="1" fill="url(#ng)"/>
+        <rect x="22" y="15" width="3.5" height="12.5" rx="1" fill="url(#ng)" opacity=".55"/>
+        <polyline points="8.75,20 13.75,14 18.75,9 23.75,13" stroke="#BAE6FD" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18.75" cy="9" r="1.8" fill="#BAE6FD"/>
+        <defs>
+          <linearGradient id="ng" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0284C7"/><stop offset="1" stop-color="#7DD3FC"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-name">Daniel Quevedo</span>
+        <span class="brand-role">Data Analyst</span>
+      </div>
+    </a>
+   <nav class="nav-links" id="nl">
+  <a href="#sobre" class="nav-link" onclick="scrollSection('sobre'); return false">Sobre</a>
+  <a href="#projetos" class="nav-link" onclick="scrollSection('projetos'); return false">Projetos</a>
+  <a href="#habilidades" class="nav-link" onclick="scrollSection('habilidades'); return false">Habilidades</a>
+  <a href="#contato" class="nav-cta" onclick="scrollSection('contato'); return false">
+    Contato
+    <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+      <path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5"
+        stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round"/>
+    </svg>
+  </a>
+</nav>
+    <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-grid"></div>
+    <div class="hero-grad"></div>
+    <div class="hero-rule"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="badge-dot"></span><span class="badge-txt">Disponível para oportunidades</span></div>
+      <h1 class="hero-name">
+        <span class="name-first">Daniel</span>
+        <span class="name-last">Quevedo</span>
+      </h1>
+      <p class="hero-role"><em>Power BI &amp; Automação</em></p>
+      <p class="hero-headline" id="headline"><span id="typed"></span><span class="caret"></span></p>
+      <p class="hero-sub">Foco em Power BI, automação de processos e análise de dados orientada ao negócio. Construindo soluções que geram impacto real.</p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn-p" id="btnProj" onclick="scrollSection('projetos');return false">
+          <span>Ver projetos</span>
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contato" class="btn-g" onclick="scrollSection('contato');return false">Vamos conversar</a>
+      </div>
+      <div class="kpi-strip">
+        <div class="kpi"><span class="kpi-val" data-target="8" data-suffix="+">8+</span><span class="kpi-lbl">Projetos<br>Entregues</span></div>
+        <div class="kpi"><span class="kpi-val" data-target="4" data-suffix="">4</span><span class="kpi-lbl">Dashboards<br>em Produção</span></div>
+        <div class="kpi"><span class="kpi-val">−40%</span><span class="kpi-lbl">Redução<br>de Tempo</span></div>
+        <div class="kpi"><span class="kpi-val" data-target="100" data-suffix="%">100%</span><span class="kpi-lbl">Automações<br>Ativas</span></div>
+      </div>
+    </div>
+    <div class="hero-photo-col">
+      <div class="photo-shell">
+        <div class="photo-halo"></div>
+        <div class="photo-orbit1"></div>
+        <div class="photo-orbit2"></div>
+        <div class="photo-frame">
+            <img src="./assets/images/daniel.jpg" alt="Foto Daniel Quevedo">
+        </div>
+        <div class="stack-card">
+          <span class="sc-lbl">Stack</span>
+          <span class="sc-val">Power BI</span>
+          <span class="sc-sub">DAX · Power Query</span>
+        </div>
+        <div class="loc-pill">
+          <span class="loc-dot"></span>
+          <span class="loc-txt">Sorocaba, SP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span class="scroll-line"></span><span>scroll</span></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section class="sec sec-dark" id="sobre">
+  <div class="wrap">
+    <div class="about-layout">
+      <div class="about-photo-col rv rv-l">
+        <div class="id-card">
+            <div class="id-card-img"><img src="./assets/images/daniel.jpg" alt="Foto Daniel Quevedo"></div>
+            <div class="id-card-body">
+            <div class="id-name">Daniel Quevedo</div>
+            <div class="id-role">Data Analyst em formação · Power BI · Automação</div>
+            <div class="id-meta">
+              <span class="id-loc">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Sorocaba, SP
+              </span>
+              <span class="id-avail"><span class="avail-dot"></span>Disponível</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="a-stat"><span class="a-stat-num">8+</span><span class="a-stat-lbl">Projetos</span></div>
+          <div class="a-stat"><span class="a-stat-num">1+</span><span class="a-stat-lbl">Anos</span></div>
+          <div class="a-stat"><span class="a-stat-num">5</span><span class="a-stat-lbl">Ferramentas</span></div>
+        </div>
+      </div>
+      <div class="about-text-col">
+        <div class="rv dl1">
+          <div class="eyebrow">Quem sou</div>
+          <h2 class="sec-title">Profissional de dados com <i>visão de negócio</i></h2>
+        </div>
+        <div class="about-prose rv dl2">
+          <p>Sou o Daniel — analista de dados em formação, focado em construir soluções que resolvem problemas reais do ambiente operacional. Atuo na interseção entre <strong>tecnologia e negócio</strong>, transformando dados dispersos em dashboards que gestores realmente usam para decidir.</p>
+          <p>Meu ecossistema principal é o <strong>Microsoft Power Platform</strong>: Power BI com DAX, transformações com Power Query, automações via Power Automate e apps com Power Apps. Cada projeto começa com um problema concreto e termina com impacto mensurável.</p>
+          <p>Estou em crescimento contínuo — estudando modelagem de dados, análise estatística e boas práticas de BI para entregar mais valor a cada projeto.</p>
+        </div>
+        <div class="hl-grid rv dl3">
+          <div class="hl-card"><span class="hl-icon">◈</span><div><div class="hl-title">Dashboards acionáveis</div><div class="hl-desc">Visualizações que movem decisões, não só exibem números.</div></div></div>
+          <div class="hl-card"><span class="hl-icon">⟁</span><div><div class="hl-title">Automação end-to-end</div><div class="hl-desc">Fluxos que eliminam trabalho manual com rastreabilidade total.</div></div></div>
+          <div class="hl-card"><span class="hl-icon">⬡</span><div><div class="hl-title">Aplicações low-code</div><div class="hl-desc">Apps Power Apps integrados ao SharePoint para adoção real.</div></div></div>
+          <div class="hl-card"><span class="hl-icon">◎</span><div><div class="hl-title">Resultado mensurável</div><div class="hl-desc">Cada entrega tem uma métrica. Se não mede, não conta.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section class="sec" id="projetos">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Projetos &amp; Impacto</div><h2 class="sec-title">Soluções com <i>resultado real</i></h2><p class="sec-sub">Construídos para resolver problemas concretos — cada entrega com métrica de resultado documentada.</p></div>
+    <div class="proj-stack">
+
+      <article class="proj-card rv dl1" style="--proj-accent:#38BDF8">
+        <div class="proj-shimmer"></div>
+        <div class="proj-left">
+          <div class="proj-head"><div class="proj-ico">🔧</div><div class="proj-meta"><span class="proj-num">01 / 04</span><span class="proj-cat">Dashboard · PCM</span></div></div>
+          <h3 class="proj-title">Dashboard de Manutenção</h3>
+          <div><div class="prob-lbl">Problema</div><p class="prob-txt">Gestores sem visibilidade sobre HH consumidos, backlog de ordens e produtividade das equipes — decisões baseadas em feeling, não em dados.</p></div>
+          <div class="chip-row"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Excel</span><span class="chip">SharePoint</span></div>
+        </div>
+        <div class="proj-right">
+          <div><div class="sol-lbl">Solução</div><p class="sol-txt">Dashboard com HH planejado vs. realizado, ranking de backlog por prioridade e KPIs de produtividade por equipe. Atualização automática via SharePoint.</p></div>
+          <div class="impact-box"><div class="impact-ico">📉</div><div><div class="impact-lbl">Resultado</div><div class="impact-val">−30%</div><div class="impact-desc">no tempo de análise de desempenho das equipes</div></div></div>
+        </div>
+      </article>
+
+      <article class="proj-card rv dl2" style="--proj-accent:#34D399">
+        <div class="proj-shimmer"></div>
+        <div class="proj-left">
+          <div class="proj-head"><div class="proj-ico">📦</div><div class="proj-meta"><span class="proj-num">02 / 04</span><span class="proj-cat">Sistema · Estoque</span></div></div>
+          <h3 class="proj-title">Controle de Estoque</h3>
+          <div><div class="prob-lbl">Problema</div><p class="prob-txt">Planilhas desconexas geravam divergências constantes de inventário e impossibilidade de consultar saldos em tempo real.</p></div>
+          <div class="chip-row"><span class="chip">Power Apps</span><span class="chip">SharePoint</span><span class="chip">Power Automate</span><span class="chip">Power BI</span></div>
+        </div>
+        <div class="proj-right">
+          <div><div class="sol-lbl">Solução</div><p class="sol-txt">App Power Apps integrado ao SharePoint para registro, movimentação e consulta em tempo real, com alertas automáticos de nível mínimo e dashboard de gestão.</p></div>
+          <div class="impact-box"><div class="impact-ico">✅</div><div><div class="impact-lbl">Resultado</div><div class="impact-val">−60%</div><div class="impact-desc">no tempo de atualização · zero divergências registradas</div></div></div>
+        </div>
+      </article>
+
+      <article class="proj-card rv dl3" style="--proj-accent:#F59E0B">
+        <div class="proj-shimmer"></div>
+        <div class="proj-left">
+          <div class="proj-head"><div class="proj-ico">📈</div><div class="proj-meta"><span class="proj-num">03 / 04</span><span class="proj-cat">Análise · BI</span></div></div>
+          <h3 class="proj-title">Análise ABC / XYZ</h3>
+          <div><div class="prob-lbl">Problema</div><p class="prob-txt">Todos os itens do estoque recebiam igual atenção. Sem priorização, o time desperdiçava esforço em itens de baixo impacto.</p></div>
+          <div class="chip-row"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Excel</span></div>
+        </div>
+        <div class="proj-right">
+          <div><div class="sol-lbl">Solução</div><p class="sol-txt">Modelo ABC × XYZ em Power BI com segmentação automática via DAX. Visualizações para decisão de reposição baseada em criticidade e variabilidade.</p></div>
+          <div class="impact-box"><div class="impact-ico">🎯</div><div><div class="impact-lbl">Resultado</div><div class="impact-val">Pareto</div><div class="impact-desc">20% dos itens = 80% do valor — reposição estratégica</div></div></div>
+        </div>
+      </article>
+
+      <article class="proj-card rv dl4" style="--proj-accent:#A78BFA">
+        <div class="proj-shimmer"></div>
+        <div class="proj-left">
+          <div class="proj-head"><div class="proj-ico">⚡</div><div class="proj-meta"><span class="proj-num">04 / 04</span><span class="proj-cat">Automação</span></div></div>
+          <h3 class="proj-title">Automação de Fluxos</h3>
+          <div><div class="prob-lbl">Problema</div><p class="prob-txt">Aprovações e notificações enviadas manualmente geravam atrasos, esquecimentos e ausência de rastreabilidade.</p></div>
+          <div class="chip-row"><span class="chip">Power Automate</span><span class="chip">SharePoint</span><span class="chip">Teams</span><span class="chip">Outlook</span></div>
+        </div>
+        <div class="proj-right">
+          <div><div class="sol-lbl">Solução</div><p class="sol-txt">Fluxos Power Automate integrados ao SharePoint: aprovações automáticas, notificações por Teams e rastreabilidade completa — zero intervenção manual.</p></div>
+          <div class="impact-box"><div class="impact-ico">🚀</div><div><div class="impact-lbl">Resultado</div><div class="impact-val">100%</div><div class="impact-desc">das notificações automatizadas · 40% mais rápido</div></div></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section class="sec sec-mid" id="habilidades">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Habilidades</div><h2 class="sec-title">Stack técnico <i>&amp; competências</i></h2><p class="sec-sub">Construído na prática. Cada ferramenta foi usada em projeto real com entrega de valor mensurável.</p></div>
+    <div class="skill-grid" id="skillGrid">
+      <div class="skill-group rv dl1">
+        <div class="sg-head"><div class="sg-ico">◈</div><div><div class="sg-name">Power BI &amp; Analytics</div></div></div>
+        <div class="sg-desc">Relatórios, modelagem dimensional e análise orientada a decisão.</div>
+        <div class="bar-list">
+          <div><div class="bar-row"><span class="bar-name">Power BI Desktop</span><span class="bar-sub">Relatórios &amp; Visuais</span></div><div class="bar-bg"><div class="bar-fg" data-w="85"></div></div></div>
+          <div><div class="bar-row"><span class="bar-name">DAX</span><span class="bar-sub">Medidas &amp; Cálculos</span></div><div class="bar-bg"><div class="bar-fg" data-w="70"></div></div></div>
+          <div><div class="bar-row"><span class="bar-name">Power Query</span><span class="bar-sub">Transformação de Dados</span></div><div class="bar-bg"><div class="bar-fg" data-w="73"></div></div></div>
+          <div><div class="bar-row"><span class="bar-name">Excel</span><span class="bar-sub">Análise, Pivots &amp; Fórmulas</span></div><div class="bar-bg"><div class="bar-fg" data-w="83"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group rv dl2">
+        <div class="sg-head"><div class="sg-ico">⟁</div><div><div class="sg-name">Automação &amp; Low-Code</div></div></div>
+        <div class="sg-desc">Fluxos automatizados, apps e integração entre plataformas.</div>
+        <div class="bar-list">
+          <div><div class="bar-row"><span class="bar-name">Power Automate</span><span class="bar-sub">Fluxos &amp; Aprovações</span></div><div class="bar-bg"><div class="bar-fg" data-w="73"></div></div></div>
+          <div><div class="bar-row"><span class="bar-name">Power Apps</span><span class="bar-sub">Aplicações Canvas</span></div><div class="bar-bg"><div class="bar-fg" data-w="66"></div></div></div>
+          <div><div class="bar-row"><span class="bar-name">SharePoint</span><span class="bar-sub">Listas &amp; Integração</span></div><div class="bar-bg"><div class="bar-fg" data-w="70"></div></div></div>
+          <div><div class="bar-row"><span class="bar-name">SQL</span><span class="bar-sub">Consultas Básicas</span></div><div class="bar-bg"><div class="bar-fg" data-w="42"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-group rv dl3">
+        <div class="sg-head"><div class="sg-ico">◎</div><div><div class="sg-name">Domínio de Negócio</div></div></div>
+        <div class="sg-desc">Conhecimento de processos industriais aplicado à análise.</div>
+        <div class="tag-cloud">
+          <span class="tag-item">Gestão de estoque</span><span class="tag-item">KPIs operacionais</span><span class="tag-item">Análise ABC/XYZ</span><span class="tag-item">Manutenção industrial</span><span class="tag-item">Mapeamento de processos</span><span class="tag-item">Storytelling com dados</span><span class="tag-item">Gestão de backlog</span><span class="tag-item">Documentação técnica</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contato">
+  <div class="contact-glow"></div>
+  <div class="contact-rule"></div>
+  <div class="wrap contact-inner">
+    <div class="eyebrow rv">Contato</div>
+    <h2 class="contact-h rv dl1">Vamos <i>conversar</i></h2>
+    <p class="contact-p rv dl2">Aberto a oportunidades, projetos e colaborações em dados e automação. Respondo com rapidez.</p>
+    <div class="contact-links rv dl3">
+      <a href="https://www.linkedin.com/in/daniel-santos-quevedo-b93249295/" class="c-link" target="_blank" rel="noopener noreferrer"><div class="c-ico">💼</div><div><span class="c-lbl">LinkedIn</span><span class="c-val">Daniel S.Quevedo</span></div></a>
+      <a href="mailto:danielquevedocorp@gmail.com" class="c-link"><div class="c-ico">📧</div><div><span class="c-lbl">E-mail</span><span class="c-val">danielquevedocorp@gmail.com</span></div></a>
+      <div class="c-link static"><div class="c-ico">📍</div><div><span class="c-lbl">Localização</span><span class="c-val">Sorocaba, SP</span></div></div>
+    </div>
+    <a href="mailto:danielquevedocorp@gmail.com" class="send-btn rv dl4">
+
+      Enviar mensagem
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><span class="footer-dot"></span>Daniel Quevedo</div>
+    <p class="footer-copy">© 2026 · Todos direitos reservados   </p>
+    <nav class="footer-nav"><a href="https://www.linkedin.com/in/daniel-santos-quevedo-b93249295/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:danielquevedocorp@gmail.com">E-mail</a></nav>
+  </div>
+</footer>
+<!-- JS externo -->
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
